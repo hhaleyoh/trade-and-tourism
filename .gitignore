@@ -1,0 +1,42 @@
+# ============================================================
+# .gitignore — trade-and-tourism
+# Place this file in the repo root (trade-and-tourism/)
+# ============================================================
+
+# ---------- PyCharm ----------
+.idea/
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Secrets (API keys, e.g. a Comtrade subscription key)
+.env
+.env.*
+
+# ---------- Jupyter ----------
+.ipynb_checkpoints/
+
+# ---------- Raw data downloads ----------
+# Large source files that can be re-downloaded. List the sources
+# in the README so the pipeline can be rebuilt.
+# UN Comtrade bulk exports (TradeData_*.csv)
+data/comtrade_data/
+# UNWTO Yearbook of Tourism Statistics editions (licensed)
+data/yearbook_tourism/
+
+# Small reference files stay tracked:
+#   data/country_name_iso3_lookup.xlsx  (your hand-built lookup)
+#   data/dist_cepii.xls, data/geo_cepii.xls, data/wdi_gdp.csv
+# processed_data/ also stays tracked so the regression notebook
+# runs without re-running the whole pipeline.
+
+# ---------- Office lock files (created while a file is open) ----------
+~$*
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
